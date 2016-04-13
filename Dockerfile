@@ -1,5 +1,5 @@
 FROM centos:centos6
-MAINTAINER Dmitriy S <smalllark@gmail.com>
+MAINTAINER Dmitry S <smalllark@gmail.com>
 ADD bitrix-env.sh /root/bitrix-env.sh
 RUN chmod 755 /root/bitrix-env.sh && \
     echo "5" | /root/bitrix-env.sh && \
