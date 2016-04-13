@@ -1,8 +1,7 @@
 FROM centos:centos6
 MAINTAINER Dmitry S <smalllark@gmail.com>
 ADD bitrix-env.sh /root/bitrix-env.sh
-RUN chmod 755 /root/bitrix-env.sh && \
-    /root/bitrix-env.sh && \
+RUN /bin/bash /root/bitrix-env.sh && \
     yum -y install python-setuptools && \
     easy_install supervisor && \
     mv /home/bitrix/www /home/bitrix/default && \
